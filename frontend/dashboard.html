@@ -1,0 +1,433 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Garden Route Adventure</title>
+    <meta name="description" content="Your customer dashboard. View bookings, download invoices, manage waivers, and update profile." />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </a>
+                </div>
+                <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="rentals.html">Rentals</a></li>
+                    <li><a href="sales.html">Sales</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html" class="btn-nav-login active"><i class="fas fa-user"></i> Dashboard</a></li>
+                    <li><a href="booking.html" class="btn-nav-book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== DASHBOARD ===== -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-wrapper">
+                <!-- Sidebar -->
+                <aside class="dashboard-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="User" />
+                        </div>
+                        <h4>John Doe</h4>
+                        <p>john@example.com</p>
+                    </div>
+                    <nav class="dashboard-nav">
+                        <ul>
+                            <li><a href="#" class="active" data-section="overview"><i class="fas fa-th-large"></i> Overview</a></li>
+                            <li><a href="#" data-section="bookings"><i class="fas fa-calendar-check"></i> My Bookings</a></li>
+                            <li><a href="#" data-section="invoices"><i class="fas fa-file-invoice"></i> Invoices</a></li>
+                            <li><a href="#" data-section="waivers"><i class="fas fa-file-signature"></i> Digital Waivers</a></li>
+                            <li><a href="#" data-section="profile"><i class="fas fa-user-edit"></i> Profile</a></li>
+                            <li><a href="#" data-section="settings"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="dashboard-content">
+                    <!-- Overview Section -->
+                    <div class="dashboard-section-content active" id="section-overview">
+                        <div class="section-header">
+                            <h2>Welcome back, John!</h2>
+                            <p>Here's a summary of your account activity.</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Total Bookings</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">Upcoming Bookings</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-file-invoice"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Invoices</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon"><i class="fas fa-file-signature"></i></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">2</span>
+                                    <span class="stat-label">Waivers Signed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quick-actions">
+                            <h3>Quick Actions</h3>
+                            <div class="quick-action-grid">
+                                <a href="booking.html" class="quick-action-btn">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>New Booking</span>
+                                </a>
+                                <a href="#" class="quick-action-btn">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Download Invoices</span>
+                                </a>
+                                <a href="#" class="quick-action-btn">
+                                    <i class="fas fa-file-signature"></i>
+                                    <span>Sign Waiver</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bookings Section -->
+                    <div class="dashboard-section-content" id="section-bookings">
+                        <div class="section-header">
+                            <h2>My Bookings</h2>
+                            <p>View and manage all your bookings.</p>
+                        </div>
+                        <div class="bookings-list">
+                            <div class="booking-card">
+                                <div class="booking-status confirmed">
+                                    <span>Confirmed</span>
+                                </div>
+                                <div class="booking-info">
+                                    <h4>Signature Sunset Experience</h4>
+                                    <p><i class="fas fa-calendar"></i> July 20, 2026</p>
+                                    <p><i class="fas fa-clock"></i> 15:15 - Winter Sunset</p>
+                                    <p><i class="fas fa-users"></i> 2 Persons</p>
+                                </div>
+                                <div class="booking-actions">
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Download Invoice</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="booking-card">
+                                <div class="booking-status completed">
+                                    <span>Completed</span>
+                                </div>
+                                <div class="booking-info">
+                                    <h4>Premium Coastal Experience</h4>
+                                    <p><i class="fas fa-calendar"></i> June 15, 2026</p>
+                                    <p><i class="fas fa-clock"></i> 08:00</p>
+                                    <p><i class="fas fa-users"></i> 1 Person</p>
+                                </div>
+                                <div class="booking-actions">
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                    <a href="#" class="btn btn-secondary btn-sm">Download Invoice</a>
+                                </div>
+                            </div>
+                            <div class="booking-card">
+                                <div class="booking-status cancelled">
+                                    <span>Cancelled</span>
+                                </div>
+                                <div class="booking-info">
+                                    <h4>Mountain Pass Adventure</h4>
+                                    <p><i class="fas fa-calendar"></i> May 10, 2026</p>
+                                    <p><i class="fas fa-clock"></i> 08:00</p>
+                                    <p><i class="fas fa-users"></i> 2 Persons</p>
+                                </div>
+                                <div class="booking-actions">
+                                    <a href="#" class="btn btn-outline btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Invoices Section -->
+                    <div class="dashboard-section-content" id="section-invoices">
+                        <div class="section-header">
+                            <h2>Invoices</h2>
+                            <p>Download your invoices for all bookings.</p>
+                        </div>
+                        <div class="invoices-list">
+                            <div class="invoice-item">
+                                <div class="invoice-info">
+                                    <span class="invoice-number">INV-2026-001</span>
+                                    <span class="invoice-date">July 20, 2026</span>
+                                    <span class="invoice-amount">R4,500</span>
+                                    <span class="invoice-status paid">Paid</span>
+                                </div>
+                                <a href="#" class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i> PDF
+                                </a>
+                            </div>
+                            <div class="invoice-item">
+                                <div class="invoice-info">
+                                    <span class="invoice-number">INV-2026-002</span>
+                                    <span class="invoice-date">June 15, 2026</span>
+                                    <span class="invoice-amount">R6,500</span>
+                                    <span class="invoice-status paid">Paid</span>
+                                </div>
+                                <a href="#" class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i> PDF
+                                </a>
+                            </div>
+                            <div class="invoice-item">
+                                <div class="invoice-info">
+                                    <span class="invoice-number">INV-2026-003</span>
+                                    <span class="invoice-date">May 10, 2026</span>
+                                    <span class="invoice-amount">R5,500</span>
+                                    <span class="invoice-status refunded">Refunded</span>
+                                </div>
+                                <a href="#" class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Waivers Section -->
+                    <div class="dashboard-section-content" id="section-waivers">
+                        <div class="section-header">
+                            <h2>Digital Waivers</h2>
+                            <p>View and sign your digital waivers.</p>
+                        </div>
+                        <div class="waivers-list">
+                            <div class="waiver-item">
+                                <div class="waiver-info">
+                                    <h4>Waiver - Sunset Experience</h4>
+                                    <p><i class="fas fa-calendar"></i> July 20, 2026</p>
+                                    <span class="waiver-status signed">Signed</span>
+                                </div>
+                                <a href="#" class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                            <div class="waiver-item">
+                                <div class="waiver-info">
+                                    <h4>Waiver - Coastal Experience</h4>
+                                    <p><i class="fas fa-calendar"></i> June 15, 2026</p>
+                                    <span class="waiver-status signed">Signed</span>
+                                </div>
+                                <a href="#" class="btn btn-outline btn-sm">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                            <div class="waiver-item">
+                                <div class="waiver-info">
+                                    <h4>Waiver - Mountain Pass</h4>
+                                    <p><i class="fas fa-calendar"></i> May 10, 2026</p>
+                                    <span class="waiver-status pending">Pending</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Sign Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Section -->
+                    <div class="dashboard-section-content" id="section-profile">
+                        <div class="section-header">
+                            <h2>My Profile</h2>
+                            <p>Update your personal information.</p>
+                        </div>
+                        <form class="profile-form" id="profileForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileFirstName">First Name *</label>
+                                    <input type="text" id="profileFirstName" value="John" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileLastName">Last Name *</label>
+                                    <input type="text" id="profileLastName" value="Doe" required />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileEmail">Email Address *</label>
+                                    <input type="email" id="profileEmail" value="john@example.com" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="profilePhone">Phone Number *</label>
+                                    <input type="tel" id="profilePhone" value="+27 79 123 4567" required />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileNationality">Nationality *</label>
+                                    <input type="text" id="profileNationality" value="South African" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileIdNumber">ID/Passport Number *</label>
+                                    <input type="text" id="profileIdNumber" value="SA12345678" required />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profileLicense">Motorcycle License *</label>
+                                    <input type="text" id="profileLicense" value="LIC-123-456" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileLicenseCountry">License Country *</label>
+                                    <input type="text" id="profileLicenseCountry" value="South Africa" required />
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div class="dashboard-section-content" id="section-settings">
+                        <div class="section-header">
+                            <h2>Settings</h2>
+                            <p>Manage your account settings and preferences.</p>
+                        </div>
+                        <div class="settings-group">
+                            <h3>Change Password</h3>
+                            <form class="password-form" id="passwordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" id="currentPassword" placeholder="••••••••" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" placeholder="••••••••" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm New Password</label>
+                                    <input type="password" id="confirmPassword" placeholder="••••••••" required />
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Password</button>
+                            </form>
+                        </div>
+                        <div class="settings-group">
+                            <h3>Notifications</h3>
+                            <div class="notification-settings">
+                                <label>
+                                    <input type="checkbox" checked /> Email confirmations
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked /> SMS updates
+                                </label>
+                                <label>
+                                    <input type="checkbox" /> Promotional emails
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked /> Booking reminders
+                                </label>
+                            </div>
+                        </div>
+                        <div class="settings-group">
+                            <h3>Account</h3>
+                            <button class="btn btn-danger">Delete Account</button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </div>
+                    <p>Premium motorcycle touring and rental experiences along South Africa's Garden Route.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Mossel Bay, Western Cape, South Africa</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+27791234567">+27 79 123 4567</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27791234567">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@gardenrouteadv.com">info@gardenrouteadv.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Route Adventure. All rights reserved.</p>
+                <div class="footer-payment">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

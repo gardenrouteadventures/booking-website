@@ -1,0 +1,522 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Adventure - Garden Route Adventure</title>
+    <meta name="description" content="Book premium motorcycle tours and rentals on the Garden Route. Real-time availability, instant confirmation, and digital contracts." />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/booking.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </a>
+                </div>
+                <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="rentals.html">Rentals</a></li>
+                    <li><a href="sales.html">Sales</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="booking.html" class="btn-nav-book active">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero booking-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <span class="page-hero-tag">Book Your Adventure</span>
+            <h1>Secure Your <span class="highlight">Ride</span></h1>
+            <p>Book premium motorcycle tours and rentals with real-time availability and instant confirmation.</p>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING STEPS ===== -->
+    <section class="booking-steps">
+        <div class="container">
+            <div class="steps-progress">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Select Experience</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Choose Date & Time</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Rider Details</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-label">Add-Ons</span>
+                </div>
+                <div class="step" data-step="5">
+                    <span class="step-number">5</span>
+                    <span class="step-label">Payment</span>
+                </div>
+                <div class="step" data-step="6">
+                    <span class="step-number">6</span>
+                    <span class="step-label">Confirmation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING FORM ===== -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <!-- Step 1: Select Experience -->
+                <div class="booking-step active" id="step1">
+                    <h2>Select Your Experience</h2>
+                    <p class="step-description">Choose between a guided tour or a self-guided rental.</p>
+                    
+                    <div class="experience-options">
+                        <div class="experience-card" data-type="tour">
+                            <div class="experience-icon"><i class="fas fa-route"></i></div>
+                            <h3>Guided Tour</h3>
+                            <p>Premium Harley-Davidson tours with expert guides</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Professional guide</li>
+                                <li><i class="fas fa-check"></i> All equipment included</li>
+                                <li><i class="fas fa-check"></i> Curated routes</li>
+                                <li><i class="fas fa-check"></i> Photos & memories</li>
+                            </ul>
+                            <button class="btn btn-primary select-experience" data-type="tour">Select Tour</button>
+                        </div>
+                        <div class="experience-card" data-type="rental">
+                            <div class="experience-icon"><i class="fas fa-motorcycle"></i></div>
+                            <h3>Self-Guided Rental</h3>
+                            <p>Explore the Garden Route on your own terms</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Premium adventure bikes</li>
+                                <li><i class="fas fa-check"></i> Unlimited mileage</li>
+                                <li><i class="fas fa-check"></i> 24/7 support</li>
+                                <li><i class="fas fa-check"></i> Route maps provided</li>
+                            </ul>
+                            <button class="btn btn-primary select-experience" data-type="rental">Select Rental</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Choose Date & Time -->
+                <div class="booking-step" id="step2">
+                    <h2>Choose Date & Time</h2>
+                    <p class="step-description">Select your preferred date and time. Check availability in real-time.</p>
+                    
+                    <div class="date-time-selection">
+                        <div class="date-picker">
+                            <label for="bookingDate">Select Date</label>
+                            <input type="date" id="bookingDate" min="2026-07-16" />
+                            <div class="availability-indicator" id="availabilityIndicator">
+                                <span class="checking">Checking availability...</span>
+                            </div>
+                        </div>
+                        
+                        <div class="time-picker">
+                            <label for="bookingTime">Select Time</label>
+                            <select id="bookingTime">
+                                <option value="">-- Select Time --</option>
+                                <option value="08:00">08:00 - Morning Departure</option>
+                                <option value="15:15">15:15 - Winter Sunset</option>
+                                <option value="17:15">17:15 - Summer Sunset</option>
+                            </select>
+                        </div>
+
+                        <div class="duration-picker">
+                            <label for="bookingDuration">Duration</label>
+                            <select id="bookingDuration">
+                                <option value="4">4 Hours - Sunset Experience</option>
+                                <option value="6">6 Hours - Ocean & Lagoon</option>
+                                <option value="7">7 Hours - Full Day Tour</option>
+                                <option value="1">1 Day - Rental (Daily)</option>
+                                <option value="7">7 Days - Rental (Weekly)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="calendar-preview">
+                        <h4>Availability Calendar</h4>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Generated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-outline prev-step">Back</button>
+                        <button class="btn btn-primary next-step" id="step2Next">Continue</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Rider Details -->
+                <div class="booking-step" id="step3">
+                    <h2>Rider Details</h2>
+                    <p class="step-description">Please provide your information for the booking.</p>
+                    
+                    <form id="riderDetailsForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" required placeholder="John" />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" required placeholder="Doe" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required placeholder="john@example.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" required placeholder="+27 79 123 4567" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nationality">Nationality *</label>
+                                <input type="text" id="nationality" required placeholder="South African" />
+                            </div>
+                            <div class="form-group">
+                                <label for="idNumber">ID/Passport Number *</label>
+                                <input type="text" id="idNumber" required placeholder="Passport or ID number" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="licenseNumber">Motorcycle License Number *</label>
+                                <input type="text" id="licenseNumber" required placeholder="License number" />
+                            </div>
+                            <div class="form-group">
+                                <label for="licenseCountry">License Issuing Country *</label>
+                                <input type="text" id="licenseCountry" required placeholder="South Africa" />
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="specialRequests">Special Requests</label>
+                            <textarea id="specialRequests" rows="3" placeholder="Any special requirements or requests..."></textarea>
+                        </div>
+                    </form>
+
+                    <div class="step-actions">
+                        <button class="btn btn-outline prev-step">Back</button>
+                        <button class="btn btn-primary next-step" id="step3Next">Continue</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Add-Ons -->
+                <div class="booking-step" id="step4">
+                    <h2>Add-Ons & Upgrades</h2>
+                    <p class="step-description">Enhance your experience with these premium options.</p>
+                    
+                    <div class="addons-grid" id="addonsGrid">
+                        <div class="addon-option" data-addon="chauffeured" data-price="1500">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonChauffeured" />
+                                <label for="addonChauffeured">Chauffeured Ride</label>
+                            </div>
+                            <p>Pillion on Harley with expert rider</p>
+                            <span class="addon-price">+R1,500</span>
+                        </div>
+                        <div class="addon-option" data-addon="private" data-price="2000">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonPrivate" />
+                                <label for="addonPrivate">Private Tour</label>
+                            </div>
+                            <p>Exclusive guide for your group</p>
+                            <span class="addon-price">+R2,000</span>
+                        </div>
+                        <div class="addon-option" data-addon="photography" data-price="500">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonPhotography" />
+                                <label for="addonPhotography">Photography Package</label>
+                            </div>
+                            <p>Professional photos delivered digitally</p>
+                            <span class="addon-price">+R500</span>
+                        </div>
+                        <div class="addon-option" data-addon="safari" data-price="1200">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonSafari" />
+                                <label for="addonSafari">Extended Safari Experience</label>
+                            </div>
+                            <p>Add a bush drive to your tour</p>
+                            <span class="addon-price">+R1,200</span>
+                        </div>
+                        <div class="addon-option" data-addon="gps" data-price="200">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonGps" />
+                                <label for="addonGps">GPS Navigation Device</label>
+                            </div>
+                            <p>Per day rental</p>
+                            <span class="addon-price">+R200/day</span>
+                        </div>
+                        <div class="addon-option" data-addon="panniers" data-price="150">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonPanniers" />
+                                <label for="addonPanniers">Panniers / Luggage</label>
+                            </div>
+                            <p>Per day rental</p>
+                            <span class="addon-price">+R150/day</span>
+                        </div>
+                        <div class="addon-option" data-addon="additionalDriver" data-price="250">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonAdditionalDriver" />
+                                <label for="addonAdditionalDriver">Additional Driver</label>
+                            </div>
+                            <p>Per day</p>
+                            <span class="addon-price">+R250/day</span>
+                        </div>
+                        <div class="addon-option" data-addon="hotelDelivery" data-price="350">
+                            <div class="addon-check">
+                                <input type="checkbox" id="addonHotelDelivery" />
+                                <label for="addonHotelDelivery">Hotel Delivery & Pickup</label>
+                            </div>
+                            <p>Each way</p>
+                            <span class="addon-price">+R350/each way</span>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-outline prev-step">Back</button>
+                        <button class="btn btn-primary next-step" id="step4Next">Continue</button>
+                    </div>
+                </div>
+
+                <!-- Step 5: Payment -->
+                <div class="booking-step" id="step5">
+                    <h2>Payment</h2>
+                    <p class="step-description">Review your booking and complete the payment.</p>
+                    
+                    <div class="payment-summary" id="paymentSummary">
+                        <div class="summary-card">
+                            <h4>Booking Summary</h4>
+                            <div class="summary-item">
+                                <span>Experience:</span>
+                                <span id="summaryExperience">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Date:</span>
+                                <span id="summaryDate">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Time:</span>
+                                <span id="summaryTime">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Rider:</span>
+                                <span id="summaryRider">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Add-Ons:</span>
+                                <span id="summaryAddons">None selected</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>Total:</span>
+                                <span id="summaryTotal">R0</span>
+                            </div>
+                            <div class="summary-deposit">
+                                <span>Deposit (30%):</span>
+                                <span id="summaryDeposit">R0</span>
+                            </div>
+                        </div>
+
+                        <div class="payment-methods">
+                            <h4>Payment Method</h4>
+                            <div class="payment-options">
+                                <button class="payment-option active" data-method="card">
+                                    <i class="fas fa-credit-card"></i> Credit Card
+                                </button>
+                                <button class="payment-option" data-method="payfast">
+                                    <i class="fas fa-bolt"></i> PayFast
+                                </button>
+                                <button class="payment-option" data-method="yoco">
+                                    <i class="fas fa-qrcode"></i> Yoco
+                                </button>
+                                <button class="payment-option" data-method="paygate">
+                                    <i class="fas fa-lock"></i> PayGate
+                                </button>
+                            </div>
+                            
+                            <div class="payment-form" id="paymentForm">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" />
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date</label>
+                                        <input type="text" id="expiryDate" placeholder="MM/YY" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card</label>
+                                    <input type="text" id="cardName" placeholder="John Doe" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="digital-waiver">
+                        <h4>Digital Waiver</h4>
+                        <div class="waiver-content">
+                            <p>By proceeding, you agree to our <a href="terms.html">Terms & Conditions</a> and confirm that:</p>
+                            <ul>
+                                <li>You hold a valid motorcycle license</li>
+                                <li>You are at least 25 years of age (or 21 with surcharge)</li>
+                                <li>You accept the rental/tour terms and conditions</li>
+                                <li>You agree to the cancellation policy</li>
+                            </ul>
+                            <label class="waiver-check">
+                                <input type="checkbox" id="waiverAgree" />
+                                I agree to the terms and conditions and digital waiver
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="step-actions">
+                        <button class="btn btn-outline prev-step">Back</button>
+                        <button class="btn btn-success btn-lg" id="submitBooking">
+                            <i class="fas fa-lock"></i> Complete Booking
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 6: Confirmation -->
+                <div class="booking-step" id="step6">
+                    <div class="confirmation-content">
+                        <div class="confirmation-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h2>Booking Confirmed!</h2>
+                        <p class="confirmation-message">Your adventure has been booked successfully.</p>
+                        
+                        <div class="confirmation-details">
+                            <div class="confirmation-card">
+                                <h4>Booking Reference</h4>
+                                <p class="booking-reference" id="bookingRef">GRA-2026-001</p>
+                            </div>
+                            <div class="confirmation-card">
+                                <h4>What's Next?</h4>
+                                <ul>
+                                    <li><i class="fas fa-envelope"></i> Confirmation email sent</li>
+                                    <li><i class="fas fa-sms"></i> SMS confirmation sent</li>
+                                    <li><i class="fas fa-file-pdf"></i> Invoice available for download</li>
+                                    <li><i class="fas fa-file-signature"></i> Digital waiver signed</li>
+                                </ul>
+                            </div>
+                            <div class="confirmation-card">
+                                <h4>Need Help?</h4>
+                                <p>Contact us at <a href="tel:+27791234567">+27 79 123 4567</a> or <a href="mailto:info@gardenrouteadv.com">info@gardenrouteadv.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="confirmation-actions">
+                            <a href="dashboard.html" class="btn btn-primary">
+                                <i class="fas fa-user"></i> View My Bookings
+                            </a>
+                            <a href="index.html" class="btn btn-outline">
+                                <i class="fas fa-home"></i> Return Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </div>
+                    <p>Premium motorcycle touring and rental experiences along South Africa's Garden Route.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Mossel Bay, Western Cape, South Africa</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+27791234567">+27 79 123 4567</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27791234567">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@gardenrouteadv.com">info@gardenrouteadv.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Route Adventure. All rights reserved.</p>
+                <div class="footer-payment">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/booking.js"></script>
+</body>
+</html>

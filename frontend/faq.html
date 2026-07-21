@@ -1,0 +1,400 @@
+<!-- faq.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Garden Route Adventure | Motorcycle Tours & Rentals</title>
+    <meta name="description" content="Frequently asked questions about motorcycle tours, rentals, bookings, and policies at Garden Route Adventure." />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/faq.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </a>
+                </div>
+                <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="rentals.html">Rentals</a></li>
+                    <li><a href="sales.html">Sales</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="booking.html" class="btn-nav-book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <span class="page-hero-tag">FAQ</span>
+            <h1>Frequently Asked <span class="highlight">Questions</span></h1>
+            <p>Find answers to the most common questions about our tours, rentals, bookings, and policies.</p>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SEARCH ===== -->
+    <section class="faq-search-section">
+        <div class="container">
+            <div class="faq-search-wrapper">
+                <div class="faq-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="faqSearch" placeholder="Search for answers..." />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ CATEGORIES ===== -->
+    <section class="faq-categories">
+        <div class="container">
+            <div class="faq-category-filters">
+                <button class="faq-category-btn active" data-category="all">All Questions</button>
+                <button class="faq-category-btn" data-category="tours">Tours</button>
+                <button class="faq-category-btn" data-category="rentals">Rentals</button>
+                <button class="faq-category-btn" data-category="bookings">Bookings</button>
+                <button class="faq-category-btn" data-category="policies">Policies</button>
+                <button class="faq-category-btn" data-category="safety">Safety</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ACCORDION ===== -->
+    <section class="faq-accordion-section">
+        <div class="container">
+            <div class="faq-accordion" id="faqAccordion">
+                <!-- Category: Tours -->
+                <div class="faq-item" data-category="tours">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What's included in a tour?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our tours include:</p>
+                        <ul>
+                            <li>Premium Harley-Davidson motorcycle</li>
+                            <li>Professional tour guide</li>
+                            <li>Fuel for the duration of the tour</li>
+                            <li>Helmet (if required)</li>
+                            <li>Refreshments and snacks</li>
+                            <li>All entrance fees to attractions</li>
+                            <li>Basic insurance</li>
+                            <li>Professional photography (on select tours)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="tours">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What's NOT included in a tour?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The following are not included in our tour packages:</p>
+                        <ul>
+                            <li>Personal travel insurance</li>
+                            <li>Gratuities for guides</li>
+                            <li>Personal items and souvenirs</li>
+                            <li>Meals not specified in the tour description</li>
+                            <li>Alcoholic beverages (unless specified)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="tours">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>Can I be a passenger on a tour?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer chauffeured rides where you can ride as a pillion on a Harley with an expert rider. This is perfect for those who want to experience the thrill of a motorcycle tour without riding themselves. The chauffeured ride add-on costs R1,500.</p>
+                    </div>
+                </div>
+
+                <!-- Category: Rentals -->
+                <div class="faq-item" data-category="rentals">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What types of bikes are available for rental?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our rental fleet includes premium adventure bikes:</p>
+                        <ul>
+                            <li><strong>Standard Adventure Bikes:</strong> BMW GS 1200, KTM 790 Adventure, Honda Africa Twin, Suzuki V-Strom (R1,500 – R2,500/day)</li>
+                            <li><strong>Premium Adventure Bikes:</strong> BMW GS 1250, KTM 1290 Super Adventure (R2,500 – R3,500/day)</li>
+                        </ul>
+                        <p>Harley-Davidsons are available exclusively through our guided tours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="rentals">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What are the rental requirements?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To rent a motorcycle from us, you must meet the following requirements:</p>
+                        <ul>
+                            <li>Hold a valid motorcycle license</li>
+                            <li>Be at least 25 years of age (21 with surcharge)</li>
+                            <li>Provide a valid ID or passport</li>
+                            <li>Provide a refundable security deposit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="rentals">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What's included in a rental?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our rentals include:</p>
+                        <ul>
+                            <li>Premium adventure motorcycle</li>
+                            <li>Helmet (if required)</li>
+                            <li>Basic insurance (damage waiver available at extra cost)</li>
+                            <li>24/7 roadside assistance</li>
+                            <li>Route maps and recommendations</li>
+                            <li>Unlimited mileage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Category: Bookings -->
+                <div class="faq-item" data-category="bookings">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>How do I book a tour or rental?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Booking is easy! You can:</p>
+                        <ol>
+                            <li>Visit our <a href="booking.html">Booking Page</a></li>
+                            <li>Select your preferred experience (tour or rental)</li>
+                            <li>Choose your date and time</li>
+                            <li>Fill in your rider details</li>
+                            <li>Select any add-ons you'd like</li>
+                            <li>Complete your payment</li>
+                            <li>Receive instant confirmation via email and SMS</li>
+                        </ol>
+                        <p>You'll also receive a digital waiver to sign and an invoice for your records.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="bookings">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What's the deposit requirement?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A 30% deposit is required to secure your booking. The remaining balance can be paid on the day of your tour or rental.</p>
+                    </div>
+                </div>
+
+                <!-- Category: Policies -->
+                <div class="faq-item" data-category="policies">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What's the cancellation policy?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our cancellation policy is as follows:</p>
+                        <ul>
+                            <li><strong>14+ days before:</strong> Full refund</li>
+                            <li><strong>7-13 days before:</strong> 50% refund</li>
+                            <li><strong>Less than 7 days:</strong> No refund</li>
+                        </ul>
+                        <p>In case of bad weather, tours will be cancelled with a full refund or rescheduled at your convenience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="policies">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>Is insurance included?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Basic third-party liability insurance is included in all tours and rentals. For rentals, a damage waiver is available at an additional cost (R200 – R500/day).</p>
+                        <p>We recommend taking out personal travel insurance to cover any unforeseen circumstances.</p>
+                    </div>
+                </div>
+
+                <!-- Category: Safety -->
+                <div class="faq-item" data-category="safety">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What safety measures do you have in place?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Safety is our top priority. We have the following measures in place:</p>
+                        <ul>
+                            <li>Pre-ride safety briefings before every tour and rental</li>
+                            <li>Helmets provided and mandatory</li>
+                            <li>Support vehicle follows every tour with a spare bike</li>
+                            <li>First aid kit in every support vehicle</li>
+                            <li>Staff are first aid trained</li>
+                            <li>Emergency contact forms for every rider</li>
+                            <li>Breakdown procedure in place</li>
+                            <li>SOS emergency on board</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="safety">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>What happens in bad weather?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If weather conditions are unsafe for riding, we will cancel the tour with a full refund. You can also choose to reschedule your tour for another date at no additional cost.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="safety">
+                    <div class="faq-question">
+                        <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                        <span>Do you provide riding jackets and gear?</span>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide thicker riding jackets for guests who need them, especially during the winter months. We recommend bringing your own riding gear for the best fit and comfort, but we have essentials available if needed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== STILL HAVE QUESTIONS ===== -->
+            <div class="faq-contact">
+                <div class="faq-contact-content">
+                    <h3>Still have questions?</h3>
+                    <p>Our team is here to help. Get in touch with us and we'll be happy to assist.</p>
+                    <div class="faq-contact-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Contact Us
+                        </a>
+                        <a href="https://wa.me/27791234567" class="btn btn-secondary">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your <span class="highlight">Adventure</span>?</h2>
+                <p>Book your premium motorcycle experience on the Garden Route today.</p>
+                <div class="cta-buttons">
+                    <a href="booking.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </div>
+                    <p>Premium motorcycle touring and rental experiences along South Africa's Garden Route.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Mossel Bay, Western Cape, South Africa</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+27791234567">+27 79 123 4567</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27791234567">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@gardenrouteadv.com">info@gardenrouteadv.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Route Adventure. All rights reserved.</p>
+                <div class="footer-payment">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/faq.js"></script>
+</body>
+</html>
