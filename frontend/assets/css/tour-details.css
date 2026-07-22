@@ -1,0 +1,258 @@
+/* assets/css/tour-details.css */
+.tour-details-section {
+    padding: 40px 0 80px;
+}
+
+.tour-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.tour-gallery {
+    margin-bottom: 30px;
+}
+
+.tour-main-image {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.tour-main-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.tour-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.tour-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.tour-thumbnails img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tour-thumbnails img:hover {
+    opacity: 0.8;
+}
+
+.tour-content h1 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.tour-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.tour-meta span {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.tour-meta i {
+    color: var(--primary);
+    margin-right: 6px;
+}
+
+.tour-description h3,
+.tour-highlights h3,
+.tour-timeline h3,
+.tour-inclusions h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.tour-description p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.tour-highlights ul {
+    margin-bottom: 25px;
+}
+
+.tour-highlights ul li {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.tour-highlights ul li i {
+    color: var(--primary);
+}
+
+.tour-timeline .timeline {
+    margin-bottom: 25px;
+}
+
+.tour-timeline .timeline-item {
+    display: flex;
+    gap: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tour-timeline .timeline-item .time {
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 120px;
+}
+
+.tour-timeline .timeline-item .event {
+    color: #555;
+}
+
+.tour-inclusions ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+}
+
+.tour-inclusions ul li {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.tour-inclusions ul li i {
+    color: var(--primary);
+}
+
+/* Sidebar */
+.tour-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.booking-card-sidebar {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #eee;
+}
+
+.booking-card-sidebar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.price-display {
+    margin-bottom: 20px;
+}
+
+.price-display .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+.price-display .per-person {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.booking-details {
+    margin-bottom: 20px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.detail-row span:last-child {
+    font-weight: 500;
+}
+
+.addons-sidebar {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid #eee;
+}
+
+.addons-sidebar h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.addon-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.addon-item span:last-child {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .tour-details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tour-main-image img {
+        height: 300px;
+    }
+    
+    .tour-thumbnails img {
+        height: 70px;
+    }
+    
+    .tour-inclusions ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .tour-meta {
+        gap: 10px;
+    }
+}
