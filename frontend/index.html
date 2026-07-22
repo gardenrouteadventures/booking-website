@@ -1,0 +1,517 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garden Route Adventure - Premium Motorcycle Experiences</title>
+    <meta name="description" content="Premium motorcycle touring and rental experiences along South Africa's Garden Route. Harley-Davidson tours, adventure bike rentals, and curated routes." />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </a>
+                </div>
+                <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="rentals.html">Rentals</a></li>
+                    <li><a href="sales.html">Sales</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="booking.html" class="btn-nav-book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-carousel">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1920&q=80');">
+                <div class="hero-content container">
+                    <span class="hero-badge">Premium Motorcycle Experiences</span>
+                    <h1 class="hero-title">Ride the <span class="highlight">Garden Route</span></h1>
+                    <p class="hero-subtitle">South Africa's Most Beautiful Region — Harley-Davidson Tours & Adventure Bike Rentals</p>
+                    <div class="hero-buttons">
+                        <a href="tours.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-route"></i> Explore Tours
+                        </a>
+                        <a href="booking.html" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-calendar-check"></i> Book Now
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><span class="stat-number">5</span> <span class="stat-label">Curated Tours</span></div>
+                        <div class="stat"><span class="stat-number">12+</span> <span class="stat-label">Premium Bikes</span></div>
+                        <div class="stat"><span class="stat-number">100%</span> <span class="stat-label">Local Expertise</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED EXPERIENCE ===== -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Experience</span>
+                <h2 class="section-title">Cape St. Blaize <span class="highlight">Sunset Tour</span></h2>
+                <p class="section-subtitle">Our flagship offering — the ultimate luxury motorcycle experience along the Garden Route coast.</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&q=80" alt="Cape St. Blaize Sunset Tour" />
+                    <div class="featured-badge">Flagship Tour</div>
+                </div>
+                <div class="featured-content">
+                    <div class="featured-details">
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>±4 hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Honeymooners · VIP Couples</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tag"></i>
+                            <span>R3,500 – R6,000 per couple</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-sun"></i>
+                            <span>Summer 17:15 · Winter 15:15</span>
+                        </div>
+                    </div>
+                    <ul class="featured-highlights">
+                        <li><i class="fas fa-check-circle"></i> Lighthouse sunset views</li>
+                        <li><i class="fas fa-check-circle"></i> Champagne & gourmet snacks</li>
+                        <li><i class="fas fa-check-circle"></i> Professional photography</li>
+                        <li><i class="fas fa-check-circle"></i> Luxury winter amenities</li>
+                    </ul>
+                    <a href="booking.html?tour=sunset" class="btn btn-primary btn-lg">
+                        <i class="fas fa-star"></i> Book This Experience
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TOURS PREVIEW ===== -->
+    <section class="tours-preview" id="tours">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Tours</span>
+                <h2 class="section-title">Premium Harley-Davidson <span class="highlight">Experiences</span></h2>
+                <p class="section-subtitle">Curated routes showcasing the best of the Garden Route — from coastal cruises to mountain passes.</p>
+            </div>
+            <div class="tour-cards">
+                <div class="tour-card">
+                    <div class="tour-card-image">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600&q=80" alt="Cape St. Blaize Sunset Tour" />
+                        <span class="tour-card-badge">Popular</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Sunset Experience</h3>
+                        <p class="tour-card-route">Cape St. Blaize · Mossel Bay</p>
+                        <div class="tour-card-meta">
+                            <span><i class="fas fa-clock"></i> ±4 hrs</span>
+                            <span><i class="fas fa-motorcycle"></i> Harley</span>
+                            <span><i class="fas fa-users"></i> Couples</span>
+                        </div>
+                        <p class="tour-card-desc">Lighthouse sunset with champagne, snacks & professional photography.</p>
+                        <div class="tour-card-footer">
+                            <span class="tour-card-price">R3,500 – R6,000</span>
+                            <a href="tour-details.html?tour=sunset" class="btn btn-outline btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-card-image">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" alt="Premium Coastal Experience" />
+                        <span class="tour-card-badge">Coastal</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Premium Coastal</h3>
+                        <p class="tour-card-route">Route 6 · Mossel Bay → Knysna</p>
+                        <div class="tour-card-meta">
+                            <span><i class="fas fa-clock"></i> ±7 hrs</span>
+                            <span><i class="fas fa-motorcycle"></i> Harley</span>
+                            <span><i class="fas fa-users"></i> Riders</span>
+                        </div>
+                        <p class="tour-card-desc">Full-day coastal cruising with ocean views, forests & lagoon scenery.</p>
+                        <div class="tour-card-footer">
+                            <span class="tour-card-price">R4,500 – R8,000</span>
+                            <a href="tour-details.html?tour=coastal" class="btn btn-outline btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-card-image">
+                        <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=600&q=80" alt="Mountain Pass Adventure" />
+                        <span class="tour-card-badge">Adventure</span>
+                    </div>
+                    <div class="tour-card-body">
+                        <h3>Mountain Pass</h3>
+                        <p class="tour-card-route">Route 1 · Outeniqua Pass → Oudtshoorn</p>
+                        <div class="tour-card-meta">
+                            <span><i class="fas fa-clock"></i> ±6.5 hrs</span>
+                            <span><i class="fas fa-motorcycle"></i> Harley</span>
+                            <span><i class="fas fa-users"></i> Riders</span>
+                        </div>
+                        <p class="tour-card-desc">Mountain passes, Cango Caves, and open Little Karoo roads.</p>
+                        <div class="tour-card-footer">
+                            <span class="tour-card-price">R4,000 – R7,000</span>
+                            <a href="tour-details.html?tour=mountain" class="btn btn-outline btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="tours.html" class="btn btn-secondary">View All Tours <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RENTALS PREVIEW ===== -->
+    <section class="rentals-preview" id="rentals">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Rentals</span>
+                <h2 class="section-title">Adventure Bike <span class="highlight">Fleet</span></h2>
+                <p class="section-subtitle">Explore the Garden Route on your own terms with our premium adventure bikes.</p>
+            </div>
+            <div class="rental-grid">
+                <div class="rental-card">
+                    <div class="rental-card-image">
+                        <img src="https://images.unsplash.com/photo-1591637333184-19aa84f3bd32?w=600&q=80" alt="BMW GS Series" />
+                    </div>
+                    <div class="rental-card-body">
+                        <h3>BMW GS Series</h3>
+                        <p class="rental-card-model">1200 · 1250</p>
+                        <div class="rental-card-meta">
+                            <span><i class="fas fa-calendar-day"></i> R1,500 – R2,500</span>
+                            <span><i class="fas fa-calendar-week"></i> R9,000 – R15,000</span>
+                        </div>
+                        <a href="rental-details.html?bike=bmw-gs" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+                <div class="rental-card">
+                    <div class="rental-card-image">
+                        <img src="C:\Users\cypri\Downloads\Garden Route Adventure Files\frontend\img\Adventure Bike\BMW F 650 GS Dakar Adventure motorcycle\BMW F 650 GS Dakar Adventure motorcycle (2).jpg" alt="KTM Adventure" />
+                    </div>
+                    <div class="rental-card-body">
+                        <h3>KTM Adventure</h3>
+                        <p class="rental-card-model">790 · 890 · 1290</p>
+                        <div class="rental-card-meta">
+                            <span><i class="fas fa-calendar-day"></i> R1,500 – R2,500</span>
+                            <span><i class="fas fa-calendar-week"></i> R9,000 – R15,000</span>
+                        </div>
+                        <a href="rental-details.html?bike=ktm-adventure" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+                <div class="rental-card">
+                    <div class="rental-card-image">
+                        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&q=80" alt="Honda Africa Twin" />
+                    </div>
+                    <div class="rental-card-body">
+                        <h3>Honda Africa Twin</h3>
+                        <p class="rental-card-model">Africa Twin</p>
+                        <div class="rental-card-meta">
+                            <span><i class="fas fa-calendar-day"></i> R1,500 – R2,500</span>
+                            <span><i class="fas fa-calendar-week"></i> R9,000 – R15,000</span>
+                        </div>
+                        <a href="rental-details.html?bike=honda-africa-twin" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+                <div class="rental-card">
+                    <div class="rental-card-image">
+                        <img src="https://images.unsplash.com/photo-1511992243105-2992b3fd0410?w=600&q=80" alt="Suzuki V-Strom" />
+                    </div>
+                    <div class="rental-card-body">
+                        <h3>Suzuki V-Strom</h3>
+                        <p class="rental-card-model">V-Strom</p>
+                        <div class="rental-card-meta">
+                            <span><i class="fas fa-calendar-day"></i> R1,500 – R2,500</span>
+                            <span><i class="fas fa-calendar-week"></i> R9,000 – R15,000</span>
+                        </div>
+                        <a href="rental-details.html?bike=suzuki-v-strom" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="rentals.html" class="btn btn-secondary">View All Rentals <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">Your Premium <span class="highlight">Motorcycle Partner</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Real-Time Booking</h3>
+                    <p>Live availability calendar with instant confirmation and automated digital contracts.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Safety First</h3>
+                    <p>Support vehicle with spare bike, first aid kit, and SOS emergency on board.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-hotel"></i></div>
+                    <h3>Hotel Delivery</h3>
+                    <p>Convenient bike delivery and pickup at your hotel or accommodation.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>VIP Experiences</h3>
+                    <p>Chauffeured rides, honeymoon packages, and exclusive private tours.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-camera"></i></div>
+                    <h3>Professional Photography</h3>
+                    <p>Capture your adventure with our professional photography packages.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support and roadside assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOCIAL PROOF ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our Riders <span class="highlight">Say</span></h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Absolutely incredible experience! The sunset tour was magical—champagne at the lighthouse with professional photos. Worth every cent!"</p>
+                    <div class="testimonial-author">
+                        <strong>Sarah & Michael</strong>
+                        <span>Honeymooners, UK</span>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The coastal tour was the highlight of our South Africa trip. The guides were knowledgeable and the bikes were in perfect condition."</p>
+                    <div class="testimonial-author">
+                        <strong>David Chen</strong>
+                        <span>Rider, USA</span>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Rented a BMW GS for 3 days. The bike was immaculate and the route recommendations were perfect. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <strong>Thomas Wagner</strong>
+                        <span>Adventure Rider, Germany</span>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-badges">
+                <span><i class="fas fa-check-circle"></i> Fully Insured</span>
+                <span><i class="fas fa-check-circle"></i> Safety Certified</span>
+                <span><i class="fas fa-check-circle"></i> Local Experts</span>
+                <span><i class="fas fa-check-circle"></i> Premium Fleet</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SEASONAL BANNER ===== -->
+    <section class="seasonal-banner">
+        <div class="container">
+            <div class="seasonal-content">
+                <span class="seasonal-tag"><i class="fas fa-snowflake"></i> Winter Special</span>
+                <h3>Luxury Winter Add-Ons</h3>
+                <p>Premium blankets, hot chocolate, warm lighting lanterns, and thicker riding jackets for the ultimate winter sunset experience.</p>
+                <a href="booking.html" class="btn btn-primary">Book Your Winter Adventure</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BLOG PREVIEW ===== -->
+    <section class="blog-preview" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Blog</span>
+                <h2 class="section-title">Rider's <span class="highlight">Guide</span></h2>
+                <p class="section-subtitle">Tips, routes, and stories from the Garden Route.</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&q=80" alt="Garden Route Routes" />
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Routes</span>
+                        <h3>Top 5 Garden Route Motorcycle Routes</h3>
+                        <p>Discover the best rides along the Garden Route, from coastal highways to mountain passes...</p>
+                        <a href="blog-post.html" class="btn btn-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" alt="Best Cafes" />
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Lifestyle</span>
+                        <h3>Best Cafes for Riders</h3>
+                        <p>From Cafe Gannet to Object Cafe — the best spots to refuel along the Garden Route...</p>
+                        <a href="blog-post.html" class="btn btn-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600&q=80" alt="Maintenance Tips" />
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Maintenance</span>
+                        <h3>Essential Motorcycle Maintenance Tips</h3>
+                        <p>Keep your bike in top condition with these pre-ride safety checks and maintenance tips...</p>
+                        <a href="blog-post.html" class="btn btn-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn btn-secondary">View All Posts <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your <span class="highlight">Adventure</span>?</h2>
+                <p>Book your premium motorcycle experience on the Garden Route today.</p>
+                <div class="cta-buttons">
+                    <a href="booking.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Book Your Adventure Now
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <span class="logo-icon"><i class="fas fa-motorcycle"></i></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </div>
+                    <p>Premium motorcycle touring and rental experiences along South Africa's Garden Route.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Mossel Bay, Western Cape, South Africa</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+27791234567">+27 79 123 4567</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27791234567">WhatsApp</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@gardenrouteadv.com">info@gardenrouteadv.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Route Adventure. All rights reserved.</p>
+                <div class="footer-payment">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
