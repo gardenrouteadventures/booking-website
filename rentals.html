@@ -1,521 +1,781 @@
-<div class="rental-grid">
+<!-- rentals.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rentals - Garden Route Adventure | Adventure Bike Fleet</title>
+    <meta name="description" content="Rent premium adventure bikes from our fleet. Harley Davidson, BMW GS, KTM, and Honda NC700X available for Garden Route exploration." />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/rentals.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon"><img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Logo.png" alt="Garden Route Adventure Logo" style="height:40px; width:auto;" /></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </a>
+                </div>
+                <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="rentals.html" class="active">Rentals</a></li>
+                    <li><a href="sales.html">Sales</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="booking.html" class="btn-nav-book">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Bike 1: Harley Davidson Softail Heritage 2012 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20soft%20tail%20Heritage%202012.jpg" alt="Harley Davidson Softail Heritage 2012" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Harley Davidson Softail Heritage</h3>
-            <p class="rental-card-type">Cruiser / Touring</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 1690cc</span>
-                <span><i class="fas fa-gas-pump"></i> 18.9L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 330kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,500 – R2,500</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R9,000 – R15,000</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=harley-softail-heritage" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=harley-softail-heritage" class="btn btn-outline btn-sm">Details</a>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <span class="page-hero-tag">Rentals</span>
+            <h1>Adventure Bike <span class="highlight">Fleet</span></h1>
+            <p>Explore the Garden Route on your own terms with our premium rental fleet. Choose from Harley Davidson, BMW GS, KTM, and Honda.</p>
+            <div class="page-hero-buttons">
+                <a href="#rental-list" class="btn btn-primary">View Fleet <i class="fas fa-arrow-down"></i></a>
+                <a href="booking.html?type=rental" class="btn btn-secondary">Book a Rental</a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Bike 2: Harley Davidson Electra Glide Tour -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20electra%20glide%20tour.jpg" alt="Harley Davidson Electra Glide Tour" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Harley Davidson Electra Glide Tour</h3>
-            <p class="rental-card-type">Touring</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 1690cc</span>
-                <span><i class="fas fa-gas-pump"></i> 22.7L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 380kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R2,000 – R3,000</span>
+    <!-- ===== RENTAL REQUIREMENTS ===== -->
+    <section class="rental-requirements">
+        <div class="container">
+            <div class="requirements-grid">
+                <div class="requirement-item">
+                    <i class="fas fa-id-card"></i>
+                    <h4>Valid Motorcycle License</h4>
+                    <p>Required for all rentals</p>
                 </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R12,000 – R18,000</span>
+                <div class="requirement-item">
+                    <i class="fas fa-user-check"></i>
+                    <h4>Minimum Age: 25</h4>
+                    <p>21 with surcharge</p>
                 </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=harley-electra-glide-tour" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=harley-electra-glide-tour" class="btn btn-outline btn-sm">Details</a>
+                <div class="requirement-item">
+                    <i class="fas fa-passport"></i>
+                    <h4>Valid ID/Passport</h4>
+                    <p>Required for verification</p>
+                </div>
+                <div class="requirement-item">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Refundable Security Deposit</h4>
+                    <p>Held on your card</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Bike 3: Harley Fat Bob Softail 2011 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20fat%20bob%20softail.jpg" alt="Harley Fat Bob Softail 2011" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Harley Fat Bob Softail</h3>
-            <p class="rental-card-type">Cruiser</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 1584cc</span>
-                <span><i class="fas fa-gas-pump"></i> 17.8L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 305kg</span>
+    <!-- ===== RENTAL LIST ===== -->
+    <section class="rental-list-section" id="rental-list">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Fleet</span>
+                <h2 class="section-title">Adventure Bike <span class="highlight">Fleet</span></h2>
+                <p class="section-subtitle">Daily and weekly rentals available with full insurance and 24/7 support.</p>
             </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,500 – R2,500</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R9,000 – R15,000</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=harley-fat-bob" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=harley-fat-bob" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
 
-    <!-- Bike 4: Harley Davidson 883 Sportster 2004 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%202004%20883%20sportster.jpg" alt="Harley Davidson 883 Sportster 2004" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Harley Davidson 883 Sportster</h3>
-            <p class="rental-card-type">Cruiser</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 883cc</span>
-                <span><i class="fas fa-gas-pump"></i> 12.5L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 260kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,000 – R1,800</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R6,000 – R10,500</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=harley-883-2004" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=harley-883-2004" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+            <!-- Adventure Bikes -->
+            <div class="rental-category">
+                <div class="rental-grid">
 
-    <!-- Bike 5: Yamaha Dragster 2006 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Yamaha%20dragster%202006.jpg" alt="Yamaha Dragster 2006" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Yamaha Dragster</h3>
-            <p class="rental-card-type">Cruiser</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 649cc</span>
-                <span><i class="fas fa-gas-pump"></i> 16L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 230kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,000 – R1,800</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R6,000 – R10,500</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=yamaha-dragster" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=yamaha-dragster" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 1: Harley Davidson Softail Heritage 2012 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/harley-softail-heritage-2012.jpg" alt="Harley Davidson Softail Heritage 2012" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Harley Davidson Softail Heritage</h3>
+                            <p class="rental-card-type">Cruiser / Touring</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 1690cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 18.9L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 330kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,500 – R2,500</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R9,000 – R15,000</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=harley-softail-heritage" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=harley-softail-heritage" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 6: Harley Davidson 883 Sportster 2013 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20883%20sportster%202013.jpg" alt="Harley Davidson 883 Sportster 2013" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Harley Davidson 883 Sportster</h3>
-            <p class="rental-card-type">Cruiser</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 883cc</span>
-                <span><i class="fas fa-gas-pump"></i> 12.5L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 260kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,000 – R1,800</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R6,000 – R10,500</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=harley-883-2013" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=harley-883-2013" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 2: Harley Davidson Electra Glide Tour -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/harley-electra-glide-tour.jpg" alt="Harley Davidson Electra Glide Tour" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Harley Davidson Electra Glide Tour</h3>
+                            <p class="rental-card-type">Touring</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 1690cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 22.7L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 380kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R2,000 – R3,000</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R12,000 – R18,000</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=harley-electra-glide-tour" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=harley-electra-glide-tour" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 7: KTM Adventure 2022 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Ktm%20adventure%202022.jpg" alt="KTM Adventure 2022" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>KTM Adventure</h3>
-            <p class="rental-card-type">Dual Sport</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 373cc</span>
-                <span><i class="fas fa-gas-pump"></i> 14.5L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 172kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,200 – R1,900</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R7,200 – R11,400</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=ktm-adventure" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=ktm-adventure" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 3: Harley Fat Bob Softail 2011 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/harley-fat-bob-softail.jpg" alt="Harley Fat Bob Softail 2011" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Harley Fat Bob Softail</h3>
+                            <p class="rental-card-type">Cruiser</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 1584cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 17.8L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 305kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,500 – R2,500</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R9,000 – R15,000</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=harley-fat-bob" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=harley-fat-bob" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 8: BMW 650GS Dakar 2005 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20650gs%20Dakar%202005.jpg" alt="BMW 650GS Dakar 2005" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>BMW 650GS Dakar</h3>
-            <p class="rental-card-type">Adventure Touring</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 652cc</span>
-                <span><i class="fas fa-gas-pump"></i> 17.3L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 192kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,200 – R1,900</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R7,200 – R11,400</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=bmw-650gs-dakar" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=bmw-650gs-dakar" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 4: Harley Davidson 883 Sportster 2004 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/harley-883-sportster-2004.jpg" alt="Harley Davidson 883 Sportster 2004" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Harley Davidson 883 Sportster</h3>
+                            <p class="rental-card-type">Cruiser</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 883cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 12.5L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 260kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,000 – R1,800</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R6,000 – R10,500</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=harley-883-2004" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=harley-883-2004" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 9: BMW 650GS 2006 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20650gs%202006.jpg" alt="BMW 650GS 2006" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>BMW 650GS</h3>
-            <p class="rental-card-type">Adventure Touring</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 652cc</span>
-                <span><i class="fas fa-gas-pump"></i> 17.3L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 192kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,200 – R1,900</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R7,200 – R11,400</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=bmw-650gs" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=bmw-650gs" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 5: Yamaha Dragster 2006 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/yamaha-dragster-2006.jpg" alt="Yamaha Dragster 2006" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Yamaha Dragster</h3>
+                            <p class="rental-card-type">Cruiser</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 649cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 16L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 230kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,000 – R1,800</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R6,000 – R10,500</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=yamaha-dragster" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=yamaha-dragster" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 10: BMW GS 1200 Adventure 2015 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%202015%20gs%201200%20adventure.jpg" alt="BMW GS 1200 Adventure 2015" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>BMW GS 1200 Adventure</h3>
-            <p class="rental-card-type">Adventure Touring</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 1170cc</span>
-                <span><i class="fas fa-gas-pump"></i> 30L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 260kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,800 – R2,800</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R10,800 – R16,800</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=bmw-gs-1200-adventure" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=bmw-gs-1200-adventure" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 6: Harley Davidson 883 Sportster 2013 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/harley-883-sportster-2013.jpg" alt="Harley Davidson 883 Sportster 2013" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Harley Davidson 883 Sportster</h3>
+                            <p class="rental-card-type">Cruiser</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 883cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 12.5L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 260kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,000 – R1,800</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R6,000 – R10,500</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=harley-883-2013" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=harley-883-2013" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 11: Honda NC700X -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Honda%20Nc700x.jpg" alt="Honda NC700X" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Honda NC700X</h3>
-            <p class="rental-card-type">Adventure / Commuter</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 670cc</span>
-                <span><i class="fas fa-gas-pump"></i> 14.1L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 218kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,200 – R1,900</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R7,200 – R11,400</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=honda-nc700x" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=honda-nc700x" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 7: KTM Adventure 2022 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/ktm-adventure-2022.jpg" alt="KTM Adventure 2022" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>KTM Adventure</h3>
+                            <p class="rental-card-type">Dual Sport</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 373cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 14.5L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 172kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,200 – R1,900</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R7,200 – R11,400</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=ktm-adventure" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=ktm-adventure" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 12: BMW GS R1200 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20GS%20R1200.jpg" alt="BMW GS R1200" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>BMW GS R1200</h3>
-            <p class="rental-card-type">Adventure Touring</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 1170cc</span>
-                <span><i class="fas fa-gas-pump"></i> 20L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 225kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,500 – R2,500</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R9,000 – R15,000</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=bmw-gs-r1200" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=bmw-gs-r1200" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 8: BMW 650GS Dakar 2005 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/bmw-650gs-dakar-2005.jpg" alt="BMW 650GS Dakar 2005" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>BMW 650GS Dakar</h3>
+                            <p class="rental-card-type">Adventure Touring</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 652cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 17.3L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 192kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,200 – R1,900</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R7,200 – R11,400</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=bmw-650gs-dakar" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=bmw-650gs-dakar" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 13: Harley Davidson Electra Glide 2011 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Electra%20glide%202011.jpg" alt="Harley Davidson Electra Glide 2011" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Harley Davidson Electra Glide</h3>
-            <p class="rental-card-type">Touring</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 1690cc</span>
-                <span><i class="fas fa-gas-pump"></i> 22.7L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 380kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R2,000 – R3,000</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R12,000 – R18,000</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=harley-electra-glide-2011" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=harley-electra-glide-2011" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 9: BMW 650GS 2006 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/bmw-650gs-2006.jpg" alt="BMW 650GS 2006" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>BMW 650GS</h3>
+                            <p class="rental-card-type">Adventure Touring</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 652cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 17.3L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 192kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,200 – R1,900</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R7,200 – R11,400</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=bmw-650gs" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=bmw-650gs" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Bike 14: Harley Davidson Road King 2006 -->
-    <div class="rental-card">
-        <div class="rental-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20road%20king%202006.jpg" alt="Harley Davidson Road King 2006" />
-            <span class="rental-card-availability">Available</span>
-        </div>
-        <div class="rental-card-body">
-            <h3>Harley Davidson Road King</h3>
-            <p class="rental-card-type">Touring / Cruiser</p>
-            <div class="rental-card-specs">
-                <span><i class="fas fa-cog"></i> 1450cc</span>
-                <span><i class="fas fa-gas-pump"></i> 18.9L tank</span>
-                <span><i class="fas fa-weight-hanging"></i> 330kg</span>
-            </div>
-            <div class="rental-card-pricing">
-                <div class="price-item">
-                    <span class="price-label">Daily</span>
-                    <span class="price-value">R1,500 – R2,500</span>
-                </div>
-                <div class="price-item">
-                    <span class="price-label">Weekly</span>
-                    <span class="price-value">R9,000 – R15,000</span>
-                </div>
-            </div>
-            <div class="rental-card-inclusions">
-                <span><i class="fas fa-check"></i> Helmet</span>
-                <span><i class="fas fa-check"></i> Insurance</span>
-                <span><i class="fas fa-check"></i> 24/7 Support</span>
-                <span><i class="fas fa-check"></i> Unlimited Miles</span>
-            </div>
-            <div class="rental-card-actions">
-                <a href="booking.html?bike=harley-road-king" class="btn btn-primary btn-sm">Book Now</a>
-                <a href="rental-details.html?bike=harley-road-king" class="btn btn-outline btn-sm">Details</a>
-            </div>
-        </div>
-    </div>
+                    <!-- 10: BMW GS 1200 Adventure 2015 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/bmw-gs-1200-adventure-2015.jpg" alt="BMW GS 1200 Adventure 2015" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>BMW GS 1200 Adventure</h3>
+                            <p class="rental-card-type">Adventure Touring</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 1170cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 30L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 260kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,800 – R2,800</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R10,800 – R16,800</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=bmw-gs-1200-adventure" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=bmw-gs-1200-adventure" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
 
-</div>
+                    <!-- 11: Honda NC700X -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/honda-nc700x.jpg" alt="Honda NC700X" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Honda NC700X</h3>
+                            <p class="rental-card-type">Adventure / Commuter</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 670cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 14.1L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 218kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,200 – R1,900</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R7,200 – R11,400</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=honda-nc700x" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=honda-nc700x" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12: BMW GS R1200 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/bmw-gs-r1200.jpg" alt="BMW GS R1200" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>BMW GS R1200</h3>
+                            <p class="rental-card-type">Adventure Touring</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 1170cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 20L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 225kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,500 – R2,500</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R9,000 – R15,000</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=bmw-gs-r1200" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=bmw-gs-r1200" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 13: Harley Davidson Electra Glide 2011 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/harley-electra-glide-2011.jpg" alt="Harley Davidson Electra Glide 2011" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Harley Davidson Electra Glide</h3>
+                            <p class="rental-card-type">Touring</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 1690cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 22.7L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 380kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R2,000 – R3,000</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R12,000 – R18,000</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=harley-electra-glide-2011" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=harley-electra-glide-2011" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 14: Harley Davidson Road King 2006 -->
+                    <div class="rental-card">
+                        <div class="rental-card-image">
+                            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/harley-road-king-2006.jpg" alt="Harley Davidson Road King 2006" />
+                            <span class="rental-card-availability">Available</span>
+                        </div>
+                        <div class="rental-card-body">
+                            <h3>Harley Davidson Road King</h3>
+                            <p class="rental-card-type">Touring / Cruiser</p>
+                            <div class="rental-card-specs">
+                                <span><i class="fas fa-cog"></i> 1450cc</span>
+                                <span><i class="fas fa-gas-pump"></i> 18.9L tank</span>
+                                <span><i class="fas fa-weight-hanging"></i> 330kg</span>
+                            </div>
+                            <div class="rental-card-pricing">
+                                <div class="price-item">
+                                    <span class="price-label">Daily</span>
+                                    <span class="price-value">R1,500 – R2,500</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">Weekly</span>
+                                    <span class="price-value">R9,000 – R15,000</span>
+                                </div>
+                            </div>
+                            <div class="rental-card-inclusions">
+                                <span><i class="fas fa-check"></i> Helmet</span>
+                                <span><i class="fas fa-check"></i> Insurance</span>
+                                <span><i class="fas fa-check"></i> 24/7 Support</span>
+                                <span><i class="fas fa-check"></i> Unlimited Miles</span>
+                            </div>
+                            <div class="rental-card-actions">
+                                <a href="booking.html?bike=harley-road-king" class="btn btn-primary btn-sm">Book Now</a>
+                                <a href="rental-details.html?bike=harley-road-king" class="btn btn-outline btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RENTAL ADD-ONS ===== -->
+    <section class="rental-addons">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Add-Ons</span>
+                <h2 class="section-title">Enhance Your <span class="highlight">Rental</span></h2>
+                <p class="section-subtitle">Customize your rental experience with these additional options.</p>
+            </div>
+            <div class="addon-grid">
+                <div class="addon-item">
+                    <div class="addon-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h4>GPS Navigation Device</h4>
+                    <span class="addon-price">R200/day</span>
+                </div>
+                <div class="addon-item">
+                    <div class="addon-icon"><i class="fas fa-suitcase"></i></div>
+                    <h4>Panniers / Luggage</h4>
+                    <span class="addon-price">R150/day</span>
+                </div>
+                <div class="addon-item">
+                    <div class="addon-icon"><i class="fas fa-user-plus"></i></div>
+                    <h4>Additional Driver</h4>
+                    <span class="addon-price">R250/day</span>
+                </div>
+                <div class="addon-item">
+                    <div class="addon-icon"><i class="fas fa-hotel"></i></div>
+                    <h4>Hotel Delivery & Pickup</h4>
+                    <span class="addon-price">R350 each way</span>
+                </div>
+                <div class="addon-item">
+                    <div class="addon-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Damage Waiver (optional)</h4>
+                    <span class="addon-price">R200 – R500/day</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RENTAL INCLUSIONS ===== -->
+    <section class="rental-inclusions">
+        <div class="container">
+            <div class="inclusions-grid">
+                <div class="inclusion-card">
+                    <i class="fas fa-helmet-safety"></i>
+                    <h4>Helmet Included</h4>
+                    <p>Quality helmets provided if required</p>
+                </div>
+                <div class="inclusion-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h4>Basic Insurance</h4>
+                    <p>Damage waiver available at extra cost</p>
+                </div>
+                <div class="inclusion-card">
+                    <i class="fas fa-road"></i>
+                    <h4>24/7 Roadside Assistance</h4>
+                    <p>Support vehicle with spare bike</p>
+                </div>
+                <div class="inclusion-card">
+                    <i class="fas fa-map-location-dot"></i>
+                    <h4>Route Maps & Recommendations</h4>
+                    <p>Curated routes and local tips</p>
+                </div>
+                <div class="inclusion-card">
+                    <i class="fas fa-infinity"></i>
+                    <h4>Unlimited Mileage</h4>
+                    <p>Ride without restrictions</p>
+                </div>
+                <div class="inclusion-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Support Vehicle</h4>
+                    <p>Follows your ride with spare bike</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Explore the <span class="highlight">Garden Route</span>?</h2>
+                <p>Book your adventure bike rental today and experience the freedom of the open road.</p>
+                <div class="cta-buttons">
+                    <a href="booking.html?type=rental" class="btn btn-primary btn-lg">
+                        <i class="fas fa-motorcycle"></i> Book a Rental
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <span class="logo-icon"><img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Logo.png" alt="Garden Route Adventure Logo" style="height:40px; width:auto;" /></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </div>
+                    <p>Premium motorcycle touring and rental experiences along South Africa's Garden Route.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1EYBBbNeWV/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/gardenrouteadv?igsh=MWR4M2gwczByMzRsYg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@garden.route.adve?_r=1&_t=ZS-98FHdbmPo1t" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 7 parsons lane, mosselbaai, 6520</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+27723835970">072 383 5970</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27723835970">072 383 5970</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@gardenrouteadv.com">info@gardenrouteadv.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Route Adventure. All rights reserved.</p>
+                <div class="footer-payment">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/rentals.js"></script>
+</body>
+</html>
