@@ -1,327 +1,700 @@
-<div class="sales-grid" id="salesGrid">
-
-    <!-- Bike 1: Harley Davidson Softail Heritage 2012 -->
-    <div class="sales-card" data-type="harley" data-price="145000" data-year="2012">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20soft%20tail%20Heritage%202012.jpg" alt="Harley Davidson Softail Heritage 2012" />
-            <span class="sales-card-badge">Featured</span>
-            <span class="sales-card-status">Available</span>
+<!-- sales.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales - Garden Route Adventure | Buy Premium Motorcycles</title>
+    <meta name="description" content="Browse our selection of premium Harley-Davidson and Adventure bikes for sale. Detailed specs, high-quality photos, and financing options available." />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/sales.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon"><img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Logo.png" alt="Garden Route Adventure Logo" style="height:40px; width:auto;" /></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </a>
+                </div>
+                <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="rentals.html">Rentals</a></li>
+                    <li><a href="sales.html" class="active">Sales</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn-nav-login"><i class="fas fa-user"></i> Login</a></li>
+                    <li><a href="booking.html" class="btn-nav-book">Book Now</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="sales-card-body">
-            <h3>Harley Davidson Softail Heritage</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2012</span>
-                <span><i class="fas fa-tachometer-alt"></i> 17,000 km</span>
-                <span><i class="fas fa-cog"></i> 1690cc</span>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container page-hero-content">
+            <span class="page-hero-tag">Sales</span>
+            <h1>Premium Motorcycles for <span class="highlight">Sale</span></h1>
+            <p>Browse our selection of Harley-Davidson and Adventure bikes. Each bike is meticulously maintained and ready for its next owner.</p>
+            <div class="page-hero-buttons">
+                <a href="#sales-list" class="btn btn-primary">View Inventory <i class="fas fa-arrow-down"></i></a>
+                <a href="#enquiry-form" class="btn btn-secondary">Make an Enquiry</a>
             </div>
-            <div class="sales-card-desc">
-                <p>Classic Softail Heritage with studded leather saddlebags, backrest, windshield, and deep chrome detailing. Well maintained and ready to ride.</p>
+        </div>
+    </section>
+
+    <!-- ===== SALES FILTERS ===== -->
+    <section class="sales-filters">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="bikeType">Bike Type:</label>
+                    <select id="bikeType" class="filter-select">
+                        <option value="all">All Bikes</option>
+                        <option value="harley">Harley-Davidson</option>
+                        <option value="adventure">Adventure Bikes</option>
+                        <option value="touring">Touring</option>
+                        <option value="cruiser">Cruiser</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priceRange">Price Range:</label>
+                    <select id="priceRange" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="under100k">Under R100,000</option>
+                        <option value="100k-200k">R100,000 - R200,000</option>
+                        <option value="200k-300k">R200,000 - R300,000</option>
+                        <option value="over300k">Over R300,000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="yearFilter">Year:</label>
+                    <select id="yearFilter" class="filter-select">
+                        <option value="all">All Years</option>
+                        <option value="2001">2001</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2015">2015</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
             </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R145,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Softail Heritage 2012">Enquire Now</button>
+        </div>
+    </section>
+
+    <!-- ===== SALES LIST ===== -->
+    <section class="sales-list-section" id="sales-list">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Inventory</span>
+                <h2 class="section-title">Available <span class="highlight">Motorcycles</span></h2>
+                <p class="section-subtitle">All bikes come with a full service history and 6-month warranty.</p>
             </div>
+
+            <div class="sales-grid" id="salesGrid">
+                <!-- Bike 1: Harley Davidson Softail Heritage 2012 -->
+                <div class="sales-card" data-type="harley" data-price="145000" data-year="2012">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Softail%20Fat%20Boy%20cruiser%20motorcycle%20(5).jpg" alt="Harley Davidson Softail Heritage 2012" />
+                        <span class="sales-card-badge">Featured</span>
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Davidson Softail Heritage</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2012</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 17,000 km</span>
+                            <span><i class="fas fa-cog"></i> 1690cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Classic Softail Heritage with leather saddlebags, studded seat, and timeless cruiser styling. Well maintained.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R145,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Softail Heritage 2012">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 2: Harley Davidson Electra Glide Tour -->
+                <div class="sales-card" data-type="harley" data-price="145000" data-year="2011">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20CVO%20Ultra%20Classic%20touring%20motorcycle%20(4).jpg" alt="Harley Davidson Electra Glide Tour" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Davidson Electra Glide Tour</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2011</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 77,000 km</span>
+                            <span><i class="fas fa-cog"></i> 1690cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Full touring package with batwing fairing, hard saddlebags, and premium audio. Built for the long haul.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R145,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Electra Glide Tour">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 3: Harley Fat Bob Softail 2011 -->
+                <div class="sales-card" data-type="harley" data-price="130000" data-year="2011">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Dyna%20Fat%20Bob%20cruiser-style%20motorcycle%20(3).jpg" alt="Harley Fat Bob Softail 2011" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Fat Bob Softail</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2011</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 15,000 km</span>
+                            <span><i class="fas fa-cog"></i> 1584cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Aggressive Fat Bob styling with dual headlamps, thick tyres, and powerful V-twin engine. Low mileage example.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R130,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Fat Bob Softail 2011">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 4: Harley Davidson 883 Sportster 2004 -->
+                <div class="sales-card" data-type="harley" data-price="60000" data-year="2004">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Sportster%20%20Iron%20883%20cruiser%20motorcycle%20(6).jpg" alt="Harley Davidson 883 Sportster 2004" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Davidson 883 Sportster</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2004</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 46,000 km</span>
+                            <span><i class="fas fa-cog"></i> 883cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Iconic 883 Sportster with classic peanut tank and Evolution engine. Reliable, fun, and ready to ride.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R60,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson 883 Sportster 2004">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 5: Sportster XL12 Custom 2004-2005 -->
+                <div class="sales-card" data-type="harley" data-price="0" data-year="2005">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Sportster%201200%20cruiser%20motorcycle%20(2).jpg" alt="Sportster XL12 Custom" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Sportster XL12 Custom</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2004-2005</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 68,000 km</span>
+                            <span><i class="fas fa-cog"></i> 1200cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Custom Sportster XL12 with upgraded styling and performance. Price on request.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">Price on request</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Sportster XL12 Custom 2004-2005">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 6: Yamaha Dragster 2006 -->
+                <div class="sales-card" data-type="cruiser" data-price="55000" data-year="2006">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Yamaha%20DragStar%20XVS1100%20cruiser%20motorcycle%20(4).jpg" alt="Yamaha Dragster 2006" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Yamaha Dragster</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2006</span>
+                            <span><i class="fas fa-tachometer-alt"></i> —</span>
+                            <span><i class="fas fa-cog"></i> 1100cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Classic Yamaha Dragster cruiser with V-twin engine, comfortable riding position, and timeless styling.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R55,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Yamaha Dragster 2006">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 7: Harley Davidson 883 Sportster 2013 -->
+                <div class="sales-card" data-type="harley" data-price="65000" data-year="2013">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Sportster%20%20Iron%20883%20cruiser%20motorcycle%20(6).jpg" alt="Harley Davidson 883 Sportster 2013" />
+                        <span class="sales-card-badge">New Arrival</span>
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Davidson 883 Sportster</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2013</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 32,000 km</span>
+                            <span><i class="fas fa-cog"></i> 883cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Later-generation 883 Sportster with improved suspension and fuel injection. Great value entry into Harley ownership.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R65,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson 883 Sportster 2013">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 8: KTM Adventure 2022 -->
+                <div class="sales-card" data-type="adventure" data-price="65000" data-year="2022">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/KTM%20390%20Adventure%20motorcycle%20(2).jpg" alt="KTM Adventure 2022" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>KTM Adventure</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 33,000 km</span>
+                            <span><i class="fas fa-cog"></i> 390cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Lightweight KTM Adventure with advanced electronics, ready for any terrain. Excellent value adventure bike.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R65,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="KTM Adventure 2022">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 9: 2001 25000km R50000 -->
+                <div class="sales-card" data-type="harley" data-price="50000" data-year="2001">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Softail%20Fat%20Boy%20cruiser%20motorcycle%20(5).jpg" alt="2001 Motorcycle" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Davidson Cruiser</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2001</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 25,000 km</span>
+                            <span><i class="fas fa-cog"></i> —</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Classic early-2000s cruiser with low mileage for its age. Great entry-level Harley.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R50,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Cruiser 2001">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 10: BMW 650GS Dakar 2005 -->
+                <div class="sales-card" data-type="adventure" data-price="55000" data-year="2005">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20F%20650%20GS%20Dakar%20Adventure%20motorcycle%20(6).jpg" alt="BMW 650GS Dakar 2005" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>BMW 650GS Dakar</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2005</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 10,000 km</span>
+                            <span><i class="fas fa-cog"></i> 652cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Legendary Dakar-spec BMW 650GS with low mileage. Perfect adventure touring machine.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R55,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW 650GS Dakar 2005">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 11: BMW 650GS 2006 -->
+                <div class="sales-card" data-type="adventure" data-price="59000" data-year="2006">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20F650GS%20Dakar%20Adventure%20motorcycle%20(5).jpg" alt="BMW 650GS 2006" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>BMW 650GS</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2006</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 19,000 km</span>
+                            <span><i class="fas fa-cog"></i> 652cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Reliable BMW 650GS adventure bike. Single-cylinder, fuel-injected, and ready for the Garden Route.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R59,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW 650GS 2006">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 12: BMW GS 1200 Adventure 2015 -->
+                <div class="sales-card" data-type="adventure" data-price="145000" data-year="2015">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20F%20650%20GS%20Dakar%20Adventure%20motorcycle%20(6).jpg" alt="BMW GS 1200 Adventure 2015" />
+                        <span class="sales-card-badge">Featured</span>
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>BMW GS 1200 Adventure</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2015</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 24,000 km</span>
+                            <span><i class="fas fa-cog"></i> 1170cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Water-cooled BMW GS 1200 Adventure. The ultimate continent-crossing machine with full touring kit.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R145,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW GS 1200 Adventure 2015">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 13: Honda NC700X -->
+                <div class="sales-card" data-type="adventure" data-price="60000" data-year="2014">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20F650GS%20Dakar%20Adventure%20motorcycle%20(5).jpg" alt="Honda NC700X" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Honda NC700X</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> —</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 50,000 km</span>
+                            <span><i class="fas fa-cog"></i> 670cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Versatile Honda NC700X with fuel-efficient parallel-twin engine. Perfect commuter and light tourer.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R60,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Honda NC700X">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 14: BMW GS R1200 -->
+                <div class="sales-card" data-type="adventure" data-price="105000" data-year="2015">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20F%20650%20GS%20Dakar%20Adventure%20motorcycle%20(6).jpg" alt="BMW GS R1200" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>BMW GS R1200</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> —</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 85,000 km</span>
+                            <span><i class="fas fa-cog"></i> 1170cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Well-travelled BMW GS R1200 with boxer engine. High mileage but meticulously maintained.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R105,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW GS R1200">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 15: Harley Davidson Electra Glide 2011 -->
+                <div class="sales-card" data-type="harley" data-price="145000" data-year="2011">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20CVO%20Ultra%20Classic%20touring%20motorcycle%20(4).jpg" alt="Harley Davidson Electra Glide 2011" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Davidson Electra Glide</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2011</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 24,000 km</span>
+                            <span><i class="fas fa-cog"></i> 1690cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Premium Electra Glide touring motorcycle with batwing fairing, hard bags, and premium audio.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R145,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Electra Glide 2011">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bike 16: Harley Davidson Road King 2006 -->
+                <div class="sales-card" data-type="harley" data-price="85000" data-year="2006">
+                    <div class="sales-card-image">
+                        <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Softail%20Fat%20Boy%20cruiser%20motorcycle%20(5).jpg" alt="Harley Davidson Road King 2006" />
+                        <span class="sales-card-status">Available</span>
+                    </div>
+                    <div class="sales-card-body">
+                        <h3>Harley Davidson Road King</h3>
+                        <div class="sales-card-specs">
+                            <span><i class="fas fa-calendar"></i> 2006</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 43,600 km</span>
+                            <span><i class="fas fa-cog"></i> 1450cc</span>
+                        </div>
+                        <div class="sales-card-desc">
+                            <p>Iconic Road King touring cruiser with detachable windshield and classic Harley styling.</p>
+                        </div>
+                        <div class="sales-card-footer">
+                            <span class="sales-card-price">R85,000</span>
+                            <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Road King 2006">Enquire Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sales-cta">
+                <p>Want to sell your bike? We're always looking for quality pre-owned motorcycles.</p>
+                <a href="contact.html" class="btn btn-secondary">Sell Your Bike</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINANCING OPTIONS ===== -->
+    <section class="financing-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Financing</span>
+                <h2 class="section-title">Flexible <span class="highlight">Financing</span> Options</h2>
+                <p class="section-subtitle">Get your dream bike with our competitive financing solutions.</p>
+            </div>
+            <div class="financing-grid">
+                <div class="financing-card">
+                    <i class="fas fa-percent"></i>
+                    <h3>Competitive Rates</h3>
+                    <p>Interest rates from 8.5% p.a. with flexible terms up to 72 months.</p>
+                </div>
+                <div class="financing-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Low Deposits</h3>
+                    <p>Deposit options starting from 10% with quick approval.</p>
+                </div>
+                <div class="financing-card">
+                    <i class="fas fa-file-signature"></i>
+                    <h3>Easy Application</h3>
+                    <p>Simple online application process with fast decisions.</p>
+                </div>
+                <div class="financing-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Warranty Included</h3>
+                    <p>All financed bikes come with a 6-month comprehensive warranty.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#enquiry-form" class="btn btn-primary">Apply for Financing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ENQUIRY FORM ===== -->
+    <section class="enquiry-section" id="enquiry-form">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Enquire</span>
+                <h2 class="section-title">Interested in a <span class="highlight">Bike</span>?</h2>
+                <p class="section-subtitle">Fill out the form below and our sales team will get back to you within 24 hours.</p>
+            </div>
+            <div class="enquiry-form-wrapper">
+                <form id="enquiryForm" class="enquiry-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="enquiryName">Full Name *</label>
+                            <input type="text" id="enquiryName" required placeholder="John Doe" />
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryEmail">Email Address *</label>
+                            <input type="email" id="enquiryEmail" required placeholder="john@example.com" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="enquiryPhone">Phone Number *</label>
+                            <input type="tel" id="enquiryPhone" required placeholder="072 383 5970" />
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryBike">Interested Bike</label>
+                            <select id="enquiryBike">
+                                <option value="">Select a bike</option>
+                                <option value="Harley Davidson Softail Heritage 2012">Harley Davidson Softail Heritage 2012</option>
+                                <option value="Harley Davidson Electra Glide Tour">Harley Davidson Electra Glide Tour</option>
+                                <option value="Harley Fat Bob Softail 2011">Harley Fat Bob Softail 2011</option>
+                                <option value="Harley Davidson 883 Sportster 2004">Harley Davidson 883 Sportster 2004</option>
+                                <option value="Sportster XL12 Custom 2004-2005">Sportster XL12 Custom 2004-2005</option>
+                                <option value="Yamaha Dragster 2006">Yamaha Dragster 2006</option>
+                                <option value="Harley Davidson 883 Sportster 2013">Harley Davidson 883 Sportster 2013</option>
+                                <option value="KTM Adventure 2022">KTM Adventure 2022</option>
+                                <option value="Harley Davidson Cruiser 2001">Harley Davidson Cruiser 2001</option>
+                                <option value="BMW 650GS Dakar 2005">BMW 650GS Dakar 2005</option>
+                                <option value="BMW 650GS 2006">BMW 650GS 2006</option>
+                                <option value="BMW GS 1200 Adventure 2015">BMW GS 1200 Adventure 2015</option>
+                                <option value="Honda NC700X">Honda NC700X</option>
+                                <option value="BMW GS R1200">BMW GS R1200</option>
+                                <option value="Harley Davidson Electra Glide 2011">Harley Davidson Electra Glide 2011</option>
+                                <option value="Harley Davidson Road King 2006">Harley Davidson Road King 2006</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="enquiryMessage">Message</label>
+                        <textarea id="enquiryMessage" rows="4" placeholder="Tell us more about what you're looking for..."></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" required />
+                            I agree to the <a href="terms.html">Terms & Conditions</a> and <a href="privacy.html">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Find Your Perfect <span class="highlight">Ride</span></h2>
+                <p>Browse our inventory or let us help you find the bike of your dreams.</p>
+                <div class="cta-buttons">
+                    <a href="#sales-list" class="btn btn-primary btn-lg">
+                        <i class="fas fa-search"></i> Browse Inventory
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone"></i> Speak to Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo">
+                        <span class="logo-icon"><img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Logo.png" alt="Garden Route Adventure Logo" style="height:40px; width:auto;" /></span>
+                        <span class="logo-text">Garden Route <span class="highlight">Adventure</span></span>
+                    </div>
+                    <p>Premium motorcycle touring and rental experiences along South Africa's Garden Route.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1EYBBbNeWV/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/gardenrouteadv?igsh=MWR4M2gwczByMzRsYg==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@garden.route.adve?_r=1&_t=ZS-98FHdbmPo1t" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="rentals.html">Rentals</a></li>
+                        <li><a href="sales.html">Sales</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 7 parsons lane, mosselbaai, 6520</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+27723835970">072 383 5970</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27723835970">072 383 5970</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@gardenrouteadv.com">info@gardenrouteadv.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Route Adventure. All rights reserved.</p>
+                <div class="footer-payment">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fas fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== ENQUIRY MODAL ===== -->
+    <div class="modal" id="enquiryModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Enquiry: <span id="modalBikeName"></span></h2>
+            <form id="modalEnquiryForm">
+                <div class="form-group">
+                    <label for="modalName">Full Name *</label>
+                    <input type="text" id="modalName" required placeholder="John Doe" />
+                </div>
+                <div class="form-group">
+                    <label for="modalEmail">Email Address *</label>
+                    <input type="email" id="modalEmail" required placeholder="john@example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="modalPhone">Phone Number *</label>
+                    <input type="tel" id="modalPhone" required placeholder="072 383 5970" />
+                </div>
+                <div class="form-group">
+                    <label for="modalMessage">Message</label>
+                    <textarea id="modalMessage" rows="3" placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Enquiry</button>
+            </form>
         </div>
     </div>
 
-    <!-- Bike 2: Harley Davidson Electra Glide Tour -->
-    <div class="sales-card" data-type="harley" data-price="145000" data-year="2011">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20electra%20glide%20tour.jpg" alt="Harley Davidson Electra Glide Tour" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Harley Davidson Electra Glide Tour</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2011</span>
-                <span><i class="fas fa-tachometer-alt"></i> 77,000 km</span>
-                <span><i class="fas fa-cog"></i> 1690cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Full-dress touring motorcycle in deep red with hard saddlebags, top box, and comfortable two-up seating. Ideal for long-distance touring.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R145,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Electra Glide Tour">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 3: Harley Fat Bob Softail 2011 -->
-    <div class="sales-card" data-type="harley" data-price="130000" data-year="2011">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20fat%20bob%20softail.jpg" alt="Harley Fat Bob Softail 2011" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Harley Fat Bob Softail</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2011</span>
-                <span><i class="fas fa-tachometer-alt"></i> 15,000 km</span>
-                <span><i class="fas fa-cog"></i> 1584cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Aggressive Fat Bob with dual headlight, chunky tyres, and powerful V-twin engine. Low mileage and excellent condition.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R130,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Fat Bob Softail 2011">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 4: Harley Davidson 883 Sportster 2004 -->
-    <div class="sales-card" data-type="harley" data-price="60000" data-year="2004">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%202004%20883%20sportster.jpg" alt="Harley Davidson 883 Sportster 2004" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Harley Davidson 883 Sportster</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2004</span>
-                <span><i class="fas fa-tachometer-alt"></i> 46,000 km</span>
-                <span><i class="fas fa-cog"></i> 883cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Matte black Sportster with custom bronze air cleaner cover and cross detail. A rugged, entry-level Harley with character.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R60,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson 883 Sportster 2004">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 5: Yamaha Dragster 2006 -->
-    <div class="sales-card" data-type="cruiser" data-price="55000" data-year="2006">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Yamaha%20dragster%202006.jpg" alt="Yamaha Dragster 2006" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Yamaha Dragster</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2006</span>
-                <span><i class="fas fa-tachometer-alt"></i> 25,000 km</span>
-                <span><i class="fas fa-cog"></i> 649cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Gold and silver two-tone cruiser with windshield and classic styling. Reliable V-twin power and a comfortable ride.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R55,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Yamaha Dragster 2006">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 6: Harley Davidson 883 Sportster 2013 -->
-    <div class="sales-card" data-type="harley" data-price="65000" data-year="2013">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20883%20sportster%202013.jpg" alt="Harley Davidson 883 Sportster 2013" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Harley Davidson 883 Sportster</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2013</span>
-                <span><i class="fas fa-tachometer-alt"></i> 32,000 km</span>
-                <span><i class="fas fa-cog"></i> 883cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Black Sportster with striking red fuel tank accent, backrest, and windshield. A stylish and reliable cruiser.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R65,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson 883 Sportster 2013">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 7: KTM Adventure 2022 -->
-    <div class="sales-card" data-type="adventure" data-price="65000" data-year="2022">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Ktm%20adventure%202022.jpg" alt="KTM Adventure 2022" />
-            <span class="sales-card-badge">New Arrival</span>
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>KTM Adventure</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2022</span>
-                <span><i class="fas fa-tachometer-alt"></i> 33,000 km</span>
-                <span><i class="fas fa-cog"></i> 373cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Orange and black adventure bike with modern electronics, tall windscreen, and off-road capability. Perfect for touring and trails.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R65,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="KTM Adventure 2022">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 8: BMW 650GS Dakar 2005 -->
-    <div class="sales-card" data-type="adventure" data-price="55000" data-year="2005">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20650gs%20Dakar%202005.jpg" alt="BMW 650GS Dakar 2005" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>BMW 650GS Dakar</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2005</span>
-                <span><i class="fas fa-tachometer-alt"></i> 10,000 km</span>
-                <span><i class="fas fa-cog"></i> 652cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Iconic Dakar edition with blue and white livery, knobby tyres, and rally-inspired styling. Low mileage adventure classic.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R55,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW 650GS Dakar 2005">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 9: BMW 650GS 2006 -->
-    <div class="sales-card" data-type="adventure" data-price="59000" data-year="2006">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20650gs%202006.jpg" alt="BMW 650GS 2006" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>BMW 650GS</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2006</span>
-                <span><i class="fas fa-tachometer-alt"></i> 19,000 km</span>
-                <span><i class="fas fa-cog"></i> 652cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Blue and white GS with Dakar styling, spoked wheels, and BMW reliability. A versatile dual-sport machine.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R59,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW 650GS 2006">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 10: BMW GS 1200 Adventure 2015 -->
-    <div class="sales-card" data-type="adventure" data-price="145000" data-year="2015">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%202015%20gs%201200%20adventure.jpg" alt="BMW GS 1200 Adventure 2015" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>BMW GS 1200 Adventure</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2015</span>
-                <span><i class="fas fa-tachometer-alt"></i> 24,000 km</span>
-                <span><i class="fas fa-cog"></i> 1170cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Water-cooled GS Adventure with full luggage system, top box, panniers, and crash bars. The ultimate long-distance tourer.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R145,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW GS 1200 Adventure 2015">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 11: Honda NC700X -->
-    <div class="sales-card" data-type="adventure" data-price="60000" data-year="2014">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Honda%20Nc700x.jpg" alt="Honda NC700X" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Honda NC700X</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2014</span>
-                <span><i class="fas fa-tachometer-alt"></i> 50,000 km</span>
-                <span><i class="fas fa-cog"></i> 670cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Black NC700X with G-Soul exhaust, handguards, and practical commuter-adventure styling. Economical and reliable.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R60,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Honda NC700X">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 12: BMW GS R1200 -->
-    <div class="sales-card" data-type="adventure" data-price="105000" data-year="2010">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/BMW%20GS%20R1200.jpg" alt="BMW GS R1200" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>BMW GS R1200</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2010</span>
-                <span><i class="fas fa-tachometer-alt"></i> 85,000 km</span>
-                <span><i class="fas fa-cog"></i> 1170cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>White and grey GS with crash bars, spoked wheels, and hard luggage. A proven adventure workhorse with character.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R105,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="BMW GS R1200">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 13: Harley Davidson Electra Glide 2011 -->
-    <div class="sales-card" data-type="harley" data-price="145000" data-year="2011">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20Electra%20glide%202011.jpg" alt="Harley Davidson Electra Glide 2011" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Harley Davidson Electra Glide</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2011</span>
-                <span><i class="fas fa-tachometer-alt"></i> 24,000 km</span>
-                <span><i class="fas fa-cog"></i> 1690cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Gloss black Electra Glide with batwing fairing, triple headlights, and premium touring comfort. Low mileage classic.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R145,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Electra Glide 2011">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bike 14: Harley Davidson Road King 2006 -->
-    <div class="sales-card" data-type="harley" data-price="85000" data-year="2006">
-        <div class="sales-card-image">
-            <img src="https://raw.githubusercontent.com/gardenrouteadventures/booking-website/refs/heads/main/frontend/img/Harley%20Davidson%20road%20king%202006.jpg" alt="Harley Davidson Road King 2006" />
-            <span class="sales-card-status">Available</span>
-        </div>
-        <div class="sales-card-body">
-            <h3>Harley Davidson Road King</h3>
-            <div class="sales-card-specs">
-                <span><i class="fas fa-calendar"></i> 2006</span>
-                <span><i class="fas fa-tachometer-alt"></i> 43,600 km</span>
-                <span><i class="fas fa-cog"></i> 1450cc</span>
-            </div>
-            <div class="sales-card-desc">
-                <p>Timeless Road King with detachable windshield, leather saddlebags, and classic Harley touring style.</p>
-            </div>
-            <div class="sales-card-footer">
-                <span class="sales-card-price">R85,000</span>
-                <button class="btn btn-primary btn-sm enquiry-btn" data-bike="Harley Davidson Road King 2006">Enquire Now</button>
-            </div>
-        </div>
-    </div>
-
-</div>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/sales.js"></script>
+</body>
+</html>
